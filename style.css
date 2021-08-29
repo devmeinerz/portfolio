@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("/assets/fonts/RobotoCondensed-Regular.ttf");
+    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #161616;
+    /* background-image: url("/assets/images/noise.png"); */
+}
+#container-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.texto-home-1 {    
+    color: #9e9e9e;
+    font-size: 2.65em;
+    letter-spacing: 0.1em;
+}
+#texto-home-2{
+    color: #ffffff;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+}
+#foto-home{
+    width: 20vw;
+}
