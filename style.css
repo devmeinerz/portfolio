@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Roboto';
-    src: url("/assets/fonts/RobotoCondensed-Regular.ttf");
+    src: url("./assets/fonts/RobotoCondensed-Light.ttf");
     }
 * {
     margin: 0;
@@ -11,18 +11,17 @@
     font-family: 'Roboto', sans-serif;
 }
 body {
-    background-color: #161616;
-    /* background-image: url("/assets/images/noise.png"); */
+    background-color: #101010;
 }
 #linha-fundo{
     position: relative;
-    height: 50vh;
-    border-bottom: #676767 0.2em solid;
-    background-color: #2B2B2B;
+    height: 61vh;
+    border-bottom: #676767 0.3vh solid;
+    background-color: #202020;
 }
 /* home main */
 main{
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,22 +37,42 @@ main img{
 .home-texto{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 50vh;
-    letter-spacing: 0.5em;
-    background-color: rgb(76, 100, 100);
+    letter-spacing: 0.5vh;
+    text-transform: uppercase;
+    margin-top: 4.5vh;
 }
 .home-texto p{
-    font-size: 2em;
+    font-size: 5.3vh;
     color: #8F8F8F;
+    text-transform: initial;
 }
 .home-texto h1{
-    font-size: 3em;
+    font-size: 7vh;
     color: #ffffff;
 }
-.home-foto{
+.links{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.1vh;
+    margin-top: 5vh;
+    color: #ffffff;
 
-    ackground-color: rgb(81, 107, 107);
 }
 
+
 /* home footer */
+footer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+    width: 100vw;
+    bottom: 0;
+    color: #3E3E3E;
+    background-color: #000000;
+}
+footer li{
+    display: inline;
+}
