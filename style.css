@@ -6,73 +6,92 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style-type: none;
-    /* overflow: hidden; */
+    text-decoration: none;
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
 body {
+    position: relative;
     background-color: #101010;
+    width: 100vw;
+    height: 100rem;
+    background-image: url("./assets/images/noise.png");
 }
-#linha-fundo{
+
+/* MAIN */
+
+.linha-fundo{
     position: relative;
-    height: 61vh;
-    border-bottom: #676767 0.3vh solid;
     background-color: #202020;
+    border-bottom: 0.15em #3f3f3f solid;
+    width: 100vw;
+    height: 60vh;
 }
-/* home main */
-main{
-    position: relative;
+.home-container{
+    position: absolute;
     display: flex;
-    align-items: center;
     justify-content: center;
-    top: 25vh;
-    left: 10vw;
-    height: 50vh;
-    width: 80vw;
-    border: red 2px solid;
+    align-items: center;
+    /* background-color: rgba(136, 56, 56, 0.445); */
+    width: 90vw;
+    height: 80vh;
+    left: 5vw;
+    top: 10vh;
 }
-main img{
-    height: 50vh;
+.home-textos{
+    margin-top: 5vh;
+    letter-spacing: 0.3vh;
+    color:#8F8F8F;
 }
-.home-texto{
-    display: flex;
-    flex-direction: column;
-    letter-spacing: 0.5vh;
-    text-transform: uppercase;
-    margin-top: 4.5vh;
+.home-texto-nome{
+    font-size: 4.5vh;
 }
-.home-texto p{
-    font-size: 5.3vh;
-    color: #8F8F8F;
-    text-transform: initial;
+.home-texto-nome h1{
+    font-size: 6vh;
+    color:#ffffff;
 }
-.home-texto h1{
-    font-size: 7vh;
-    color: #ffffff;
-}
-.links{
-    position: relative;
+.home-texto-links{
     display: flex;
     justify-content: space-between;
-    font-size: 2.1vh;
-    margin-top: 5vh;
-    color: #ffffff;
-
+    margin-top: 4vh;
+    display: flex;
+    font-size: 1.7vh;
+}
+.home-texto-links li{
+    
+}
+.home-foto img{
+    height: 50vh;
+    margin-left: 2rem;
 }
 
+/* FOOTER */
 
-/* home footer */
 footer{
     position: fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 2vh;
-    width: 100vw;
+    align-items: center;
     bottom: 0;
-    color: #3E3E3E;
+    width: 100vw;
+    height: 6vh;
     background-color: #000000;
 }
-footer li{
-    display: inline;
+.footer-container{
+    font-size: 2vh;
+    color:#3E3E3E;
+}
+.footer-container p{
+    padding-right: 12vh;
+}
+.footer-container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container li{
+    padding: 2vh;
+}
+.footer-container img{
+    height: 4vh;
 }
