@@ -8,15 +8,23 @@
     box-sizing: border-box;
     color: inherit;
     text-decoration: none;
-    overflow: hidden;
+    list-style: none;
     font-family: 'Roboto', sans-serif;
+/* gambiarra pro scroll funcionar sendo hidden */
+    /* -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    overflow-y: scroll;  */
 }
+/* *::-webkit-scrollbar {
+    display: none; 
+}  */
 body {
     position: relative;
     background-color: #101010;
-    width: 100vw;
-    height: 100rem;
+    width: 100%;
+    height: 100vh;
     background-image: url("./assets/images/noise.png");
+
 }
 
 /* MAIN */
@@ -30,7 +38,7 @@ body {
     position: relative;
     background-color: #8F8F8F;
     border-bottom: 0.2em #c4c4c4 solid;
-    width: 100vw;
+    width: 100%;
     height: 60vh;
 }
 .home-container{
@@ -68,11 +76,6 @@ body {
     color:#ffffff;
     transition: 0.2s ease-in;
 }
-.link:hover{
-    color:#00ffbf;
-    text-shadow: 2px 2px 5px #000000;
-    transition: 0.2s;
-}
 .link::after{
     content: '';
     display:block;
@@ -87,38 +90,89 @@ body {
     height: 0.4vh;
     margin-top: 0.2vh;
     background-color:#00ffbf;
-    text-shadow: 1px 1px 2px #bcffee;
     border-radius: 100%;
     animation: loadIn 1s;
 }
-/* .link::after{
-    content:'';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ffc70e;
-    transition: width .3s;
-}
-.link:hover::after{
-    color:#00ff80;
-    width: 100%;
-    transition: width .3s;
-} */
-
 .home-foto img{
     height: 50vh;
     margin-left: 2rem;
 }
 
+/* SOBRE */
+
+#sobre-container{
+    position: relative;
+    margin-top: 50vh;
+    margin-bottom: 10vh;
+    width: 100%;
+    background-color: #e9fffa8c;
+    background-image: url("./assets/images/noise.png");
+}
+.sobre-texto{
+    position: relative;
+    display: inline-block;
+    animation: loadIn 1s;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: justify;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.1rem;
+    margin: 5% 5% 5% 5%;
+    color: #333333;
+    /* border: 2px solid #d5d5d5; */
+}
+.sobre-texto a{
+    color: #000000;
+}
+
+/* PROJETOS */
+
+#projetos-container{
+    margin: 5% 5% 5% 5%;
+}
+#projetos-container h2{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.5vh;
+    color:#e9fffa8c;
+    animation: loadIn 1s;
+}
+#projetos-container h3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 0.5vh;
+    color:#d4d4d48c;
+    animation: loadIn 1s;
+}
+/* .projetos-grade{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.projetos-grade div{
+    width: 20rem;
+    height: 25rem;
+    margin: 2rem;
+    border: 2px solid #333333;
+} */
+
+
+
+
 /* FOOTER */
 
 footer{
-    position: fixed;
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     height: 6vh;
     background-color: #000000;
 }
@@ -137,10 +191,10 @@ footer{
     animation: loadIn 2s;
 }
 .footer-container li{
-    padding: 2vh;
+    margin: 0 2vh;
 }
 .footer-container img{
-    height: 4vh;
+    height: 3.5vh;
 }
 .btns:hover{
     filter:brightness(200);
@@ -149,41 +203,6 @@ footer{
 
 /* HOME MEDIA */
 
-@media (max-width: 870px) {
-    .home-textos{
-        margin-top: 8vh;
-        letter-spacing: 0.3vh;
-        color:#8F8F8F;
-    }
-    .home-texto-nome{
-        font-size: 3.5vh;
-    }
-    .home-texto-nome h1{
-        font-size: 4.6vh;
-        color:#ffffff;
-    }
-    .home-texto-links{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 4vh;
-        font-size: 1.3vh;
-    }
-    .home-foto img{
-        height: 40vh;
-        margin-left: 2rem;
-    }
-    .footer-container{
-        font-size: 1.7vh;
-        color:#3E3E3E;
-    }
-    .footer-container p{
-        padding-right: 7vh;
-    }
-    .footer-container li{
-        padding: 2vh;
-    }
-    .footer-container img{
-        height: 3vh;
-    }
+@media (max-width: 680px) {
 
 }
