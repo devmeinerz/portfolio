@@ -10,24 +10,28 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Roboto', sans-serif;
-/* gambiarra pro scroll funcionar sendo hidden */
-    /* -ms-overflow-style: none; 
-    scrollbar-width: none; 
-    overflow-y: scroll;  */
 }
-/* *::-webkit-scrollbar {
-    display: none; 
-}  */
 body {
     position: relative;
     background-color: #101010;
     width: 100%;
     height: 100vh;
     background-image: url("./assets/images/noise.png");
-
 }
 
-/* MAIN */
+/* Remove a cor de background automática ao auto-preencher formulários */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+box-shadow: 0 0 0 30px #a3a3a3 inset;
+ -webkit-box-shadow: 0 0 0 30px #a3a3a3 inset !important;
+}
+
+
+
+/* ========================= MAIN ====================== */
 
 @keyframes loadIn {
     0% {opacity: 0;}
@@ -101,7 +105,9 @@ body {
     margin-left: 2rem;
 }
 
-/* SOBRE */
+
+
+/* ========================= SOBRE ====================== */
 
 #sobre-container{
     position: relative;
@@ -115,20 +121,21 @@ body {
     position: relative;
     display: inline-block;
     animation: loadIn 1s;
-    font-size: 1.7rem;
-    line-height: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
     text-align: justify;
     word-spacing: 0.1rem;
     letter-spacing: 0.1rem;
     margin: 5% 5% 5% 5%;
     color: #333333;
-    /* border: 2px solid #d5d5d5; */
 }
 .sobre-texto a{
     color: #000000;
 }
 
-/* PROJETOS */
+
+
+/* ========================= PROJETOS ====================== */
 
 #projetos-container{
     margin: 5% 5% 5% 5%;
@@ -167,13 +174,13 @@ body {
     border: 0.1rem solid #505050;
     box-shadow: 1rem 1rem 1.2rem #080808;
 }
-.card00{
+.card{
     position: relative;
     display: flex;
     height: 100%;
     width: 100%;
 }
-.card00 img{
+.card img{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -183,34 +190,95 @@ body {
     transition: 0.2s;
     z-index: 1;
 }
-.card00 img:hover{
+.card img:hover{
     opacity: 0.2;
     transition: 0.2s;
 }
-.card00_texto{
+#card00_texto{
     position: absolute;
     text-align: left;
     margin: 1.5rem;
     font-size: 1.8rem;
-    text-shadow: 2px 2px 2px #000000;
     color: #ffffff;
+}
+#card01_texto, #card02_texto, #card03_texto{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #00ffbf;
 }
 
 
 
+/* ========================== CONTATO ====================== */
+
+#contato-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #e9fffa8c;
+    background-image: url("./assets/images/noise.png");
+}
+.contato-texto{
+    animation: loadIn 1s;
+    margin: 5% 5% 5% 5%;    
+}
+.contato-texto h2{
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.5vh;
+    word-spacing: 0.1rem;
+    line-height: 2rem;
+    margin-bottom: 5vh;
+    color:#333333;
+    animation: loadIn 1s;
+}
+#contato-formulario{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    animation: loadIn 0.8s;
+}
+input{
+    background:#a3a3a3;
+    border: 0 none;
+    outline: 0;
+    padding: 1rem;
+    margin-bottom: 0.2rem;
+    -webkit-appearance: none;
+}
+input::placeholder{
+    color: #ffffff;
+}
+textarea{
+    background:#a3a3a3;
+    border: 0 none;
+    outline: 0;
+    padding: 1rem;
+    margin-bottom: 0.2rem;
+    height: 15rem;
+    resize: none;
+}
+textarea::placeholder{
+    color: #ffffff;
+}
+button{
+    background:#ffffff;
+    border: 0 none;
+    outline: 0;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-/* FOOTER */
+/* ========================== FOOTER ====================== */
 
 footer{
     position: sticky;
@@ -220,6 +288,7 @@ footer{
     bottom: 0;
     width: 100%;
     height: 6vh;
+    z-index: 5;
     background-color: #000000;
 }
 .footer-container{
