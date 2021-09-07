@@ -194,14 +194,14 @@ box-shadow: 0 0 0 30px #a3a3a3 inset;
     opacity: 0.2;
     transition: 0.2s;
 }
-#card00_texto{
+#card00_texto, #card01_texto{
     position: absolute;
     text-align: left;
     margin: 1.5rem;
     font-size: 1.8rem;
     color: #ffffff;
 }
-#card01_texto, #card02_texto, #card03_texto{
+#card02_texto, #card03_texto{
     position: absolute;
     left: 50%;
     top: 50%;
